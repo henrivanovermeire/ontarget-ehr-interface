@@ -1,0 +1,182 @@
+.medications-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.medications-section.expanded {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.medications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.medications-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.toggle-medications-button {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toggle-medications-button:hover {
+  background-color: #7b1fa2;
+}
+
+.medications-loading,
+.medications-error,
+.medications-empty {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}
+
+.medications-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner-small {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #9c27b0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.medications-error {
+  color: #d32f2f;
+}
+
+.retry-button-small {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.retry-button-small:hover {
+  background-color: #7b1fa2;
+}
+
+.medications-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.medication-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #9c27b0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medication-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.medication-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.medication-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.status-active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.status-completed {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-badge.status-stopped {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.status-badge.status-unknown {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.medication-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.medication-detail-row {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.medication-detail-row .detail-label {
+  font-weight: 600;
+  color: #666;
+  min-width: 100px;
+}
+
+.medication-detail-row .detail-value {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .medication-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+

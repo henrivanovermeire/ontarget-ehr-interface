@@ -1,0 +1,21 @@
+{
+  "name": "ontarget-ehr-interface",
+  "version": "1.0.0",
+  "description": "React interface for HAPI FHIR R4 sandbox patient listing",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "insert-john-doe": "node scripts/insert-john-doe-history.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  }
+}
+
